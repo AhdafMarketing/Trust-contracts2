@@ -215,12 +215,11 @@
       </table>
       <p class="trt">اتفق الطرفان وهما بكامل أهليتهما الشرعية على ما يلي:</p>
       <div class="trm" id="termsOutput">
-        <p id="t1" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">١- يلتزم الطرف الثاني بالإعلان لصالح عميل الطرف الأول (<span id="o16"></span>) لعدد (<span id="oTD"></span>) من الاعلانات الحضورية في يوم الأحد الموافق 26/4/2026 الساعة السابعة مساءً.</p>
+        <p id="t1" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">١- يلتزم الطرف الثاني بالإعلان لصالح عميل الطرف الأول (<span id="o16"></span>) <span id="oTD"></span>.</p>
         <p id="t2" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٢- يلتزم الطرف الثاني بالسيناريو المرسل من الطرف الأول عبر الواتساب بكامل تفاصيله، وطريقة الإعلان بأسلوب مناسب وفي حال عدم الإلتزام بالسيناريو يحق للطرف الأول إستعادة تكلفة الإعلان.</p>
         <p id="t3" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٣- يحق للطرف الأول استرجاع كامل مبلغ الاعلان في حال عدم الإعلان من قبل الطرف الثاني في حسابه لأية ظروف سواء كانت من طرفه أو خارجة عن ارادته بما في من اغلاق الحساب.</p>
         <p id="t4" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٤- يحق للطرف الأول نشر وترويج الإعلان عبر منصات التواصل الاجتماعي.</p>
-        <p id="t4" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٥- يلتزم الطرف الثاني بالجلوس في الاماكن المخصصة والتزام الهدوء أثناء تقديم فقرات الحفل.</p>
-        <p id="t5" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٥- يجب على الطرف الثاني الإلتزام بالزي السعودي للرجال والزي المحتشم للنساء.</p>
+        <p id="t5" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٥- يلتزم الطرف الثاني بعدم الإعلان لأي جهة أخرى منافسة بنفس اليوم المتفق عليه، وفي حال وجود إعلان آخر يتم جدولته ليوم آخر.</p>
         <p id="t6" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٦- يلتزم الطرف الثاني بوجود ترخيص إعلاني من وزارة الإعلام ( موثوق )</p>
         <p id="t7" contenteditable="true" style="border:1px dashed #B84C2B;padding:4px 8px;border-radius:6px;margin-bottom:4px;cursor:text">٧- الإلتزامات المالية : التكلفة الإجمالية للعقد (<span id="o14"></span>) <span id="o14t"></span> ريال سعودي <span id="oTaxFull"></span>، ويلتزم الطرف الأول بسدادها لصالح الطرف الثاني عبر الحساب أعلاه.</p>
       </div>
@@ -421,8 +420,8 @@ function _applyTerms(){
     if(t.c2){document.getElementById('t2').textContent='٢- '+t.c2;}
     if(t.c3){document.getElementById('t3').textContent='٣- '+t.c3;}
     if(t.c4){document.getElementById('t4').textContent='٤- '+t.c4;}
-    if(t.c5){document.getElementById('t4').textContent='٥- '+t.c5;}
-    if(t.c6){document.getElementById('t5').textContent='٦- '+t.c6;}
+    if(t.c5){document.getElementById('t5').textContent='٥- '+t.c5;}
+    if(t.c6){document.getElementById('t6').textContent='٦- '+t.c6;}
   }catch(ex){}
 }
 
@@ -461,9 +460,9 @@ document.getElementById('bP').onclick=function(){
   _s(11,_g(11));_s(12,_g(12));_s(14,_g(14));_s(15,_fullName());_s(16,_g(15));
 
   var aN=adChk?adInp.value:'0',rN=remChk?remInp.value:'0',dt='';
-  if(adChk&&remChk)dt=aN;
-  else if(adChk)dt=aN;
-  else if(remChk)dt=rN;
+  if(adChk&&remChk)dt='وعدد ('+aN+') من الإعلانات وعدد ('+rN+') من التذكيرات';
+  else if(adChk)dt='لعدد ('+aN+') من الإعلانات';
+  else if(remChk)dt='لعدد ('+rN+') من التذكيرات';
   document.getElementById('oTD').textContent=dt;
 
   var ct=_n2a(_g(14).replace(/[^0-9]/g,''));
